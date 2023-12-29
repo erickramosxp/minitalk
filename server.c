@@ -6,7 +6,7 @@
 /*   By: erramos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 19:21:27 by erramos           #+#    #+#             */
-/*   Updated: 2023/12/29 15:09:13 by erramos          ###   ########.fr       */
+/*   Updated: 2023/12/29 17:28:59 by erramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void    print_num(int bit)
         i++;
         if (i == 8)
         {
-                printf("%c", c);
+                ft_printf("%c", c);
                 i = 0;
                 c = 0;
         }
@@ -33,7 +33,8 @@ void    print_num(int bit)
 
 int     main(void)
 {
-        printf("%d\n", getpid());
+        ft_printf("%d\n", getpid());
+	ft_printf("%d\n%d\n", SIGUSR1, SIGUSR2);
         while (1)
         {
                 signal(SIGUSR1, print_num);
