@@ -6,7 +6,7 @@
 #    By: erramos <erramos@student.42.rio>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/29 16:24:04 by erramos           #+#    #+#              #
-#    Updated: 2023/12/30 14:57:02 by erramos          ###   ########.fr        #
+#    Updated: 2023/12/30 15:19:55 by erramos          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ clean:
 
 fclean: clean
 	$(MAKE) fclean -C ./libft/ft_printf/
-	$(MAKE) clean -C ./libft/
+	$(MAKE) fclean -C ./libft/
 	rm -rf $(NAME) Server Client
 
 re:	fclean all

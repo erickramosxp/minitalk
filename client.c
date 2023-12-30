@@ -6,7 +6,7 @@
 /*   By: erramos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 18:52:22 by erramos           #+#    #+#             */
-/*   Updated: 2023/12/29 17:34:53 by erramos          ###   ########.fr       */
+/*   Updated: 2023/12/30 15:27:06 by erramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,11 @@ void    send_string_bit(int pid, char *str)
 
 int     main(int argc, char **argv)
 {
+	if (argc != 3 || !argv[2])
+	{
+		ft_printf("Error");
+		exit(1);
+	}
         send_string_bit(ft_atoi(argv[1]), argv[2]);
 	return (0);
 }
