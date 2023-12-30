@@ -6,7 +6,7 @@
 #    By: erramos <erramos@student.42.rio>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/29 16:24:04 by erramos           #+#    #+#              #
-#    Updated: 2023/12/29 17:26:18 by erramos          ###   ########.fr        #
+#    Updated: 2023/12/30 14:57:02 by erramos          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,11 +22,18 @@ $(NAME):
 	ar -r ./libft/libft.a ./libft/ft_printf/*.o
 	cp ./libft/libft.a ./
 	mv libft.a $(NAME)
+	cc client.c $(NAME) -o Client
+	cc server.c $(NAME) -o Server
 
 clean:
+	$(MAKE) clean -C ./libft/ft_printf/
+	$(MAKE) clean -C ./libft/
 
-fclean:
+fclean: clean
+	$(MAKE) fclean -C ./libft/ft_printf/
+	$(MAKE) clean -C ./libft/
+	rm -rf $(NAME) Server Client
 
-re:
+re:	fclean all
 
 
