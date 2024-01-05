@@ -6,7 +6,7 @@
 /*   By: erramos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 18:52:22 by erramos           #+#    #+#             */
-/*   Updated: 2024/01/05 20:09:00 by erramos          ###   ########.fr       */
+/*   Updated: 2024/01/05 20:14:15 by erramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	main(int argc, char **argv)
 	if (argc != 3 || !argv[2])
 	{
 		ft_printf("Error, Your input must contain");
-		ft_printf(" <PROCESS PID> <MESSAGE THAT MUST BE SENT>");
+		ft_printf(" <PROCESS PID> <MESSAGE THAT MUST BE SENT>\n");
 		exit(1);
 	}
 	send_string_bit(ft_atoi(argv[1]), argv[2]);
