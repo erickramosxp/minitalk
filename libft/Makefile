@@ -6,7 +6,7 @@
 #    By: erramos <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/19 22:36:50 by erramos           #+#    #+#              #
-#    Updated: 2023/11/08 14:50:07 by erramos          ###   ########.fr        #
+#    Updated: 2024/01/05 19:38:52 by erramos          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,13 +39,13 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 
 $(OBJECTS): $(FILES) libft.h
-	cc -Wextra -Werror -Wall -c $(FILES)
-	ar rc $(NAME) $(OBJECTS)
+	@cc -Wextra -Werror -Wall -c $(FILES)
+	@ar rc $(NAME) $(OBJECTS)
 	
 clean:
-	rm -f $(OBJECTS)
+	@rm -f $(OBJECTS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all

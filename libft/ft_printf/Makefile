@@ -6,7 +6,7 @@
 #    By: erramos <erramos@student.42.rio>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/09 15:45:17 by erramos           #+#    #+#              #
-#    Updated: 2023/11/14 14:52:53 by erramos          ###   ########.fr        #
+#    Updated: 2024/01/05 19:40:29 by erramos          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,14 +27,14 @@ OBJS = $(FILES:.c=.o) $(LIBFT:.c:.o)
 all: $(NAME)
 
 $(NAME):
-	$(CFLAGS) -I. -c $(FILES) $(addprefix libft/,$(LIBFT))
-	ar rcs $(NAME) $(OBJS) $(LIBFT:.c=.o)
+	@$(CFLAGS) -I. -c $(FILES) $(addprefix libft/,$(LIBFT))
+	@ar rcs $(NAME) $(OBJS) $(LIBFT:.c=.o)
 
 clean:
-	rm -f $(OBJS)
-	rm -f $(LIBFT:.c=.o)
+	@rm -f $(OBJS)
+	@rm -f $(LIBFT:.c=.o)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re:	fclean all
